@@ -1,39 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Project Template</title>
-    <!-- Link to external CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Defer attribute ensures JavaScript loads in the background without blocking the UI -->
-    <script src="script.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eva Lin — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <nav class="container">
-            <div class="logo">MyBrand</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="site-header">
+  <div class="wrap">
+    <a href="#intro" class="brand">Eva Lin</a>
+    <nav aria-label="Primary">
+      <ul class="nav" id="nav">
+        <li><a href="#intro" data-text="Intro">Intro</a></li>
+        <li><a href="#bio" data-text="Bio">Bio</a></li>
+        <li><a href="#works" data-text="Selected Works">Selected Works</a></li>
+        <li><a href="#play" data-text="Play">Play</a></li>
+        <li><a href="#contact" data-text="Contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <span class="status">Seeking 2027 internships</span>
+      <a class="btn" href="#contact">Let’s connect</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
 
-    <main class="container">
-        <section class="hero">
-            <h1>Welcome to Your New Template</h1>
-            <p>A clean, framework-free starting point built with native web standards.</p>
-            <button id="action-btn">Click Me!</button>
-            <p id="message" class="hidden">🎉 You clicked the button!</p>
-        </section>
-    </main>
+<main>
+  <!-- INTRO -->
+  <section id="intro" aria-labelledby="intro-title">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <span class="hero-name">Eva Lin</span>
+          <h1 class="hero-title" id="intro-title">Portofli<span aria-hidden="true">★</span></h1>
+        </div>
+        <div class="hero-quote">
+          <span class="role">Creator · Designer</span>
+          <div class="placeholder" role="img" aria-label="Quote placeholder"></div>
+          <q>Placeholder quote</q>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <ul class="focus-list">
+          <li>Graphic Design</li>
+          <li>Visual Design</li>
+          <li>Game Development</li>
+        </ul>
+        <div class="hero-visual">
+          <div class="placeholder" role="img" aria-label="Hero visual placeholder"></div>
+          <p>Click the fish and stars for some fun facts :)</p>
+        </div>
+      </div>
+      <a class="btn hero-cta" href="#works">View my work</a>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2026 MyBrand. All rights reserved.</p>
-    </footer>
+  <!-- BIO -->
+  <section id="bio" aria-labelledby="bio-title">
+    <div class="wrap bio-grid">
+      <div>
+        <div class="portrait" role="img" aria-label="Portrait placeholder"></div>
+        <ul class="skills" aria-label="Tools">
+          <li>Fig</li><li>Un</li><li>Ai</li><li>Ps</li>
+        </ul>
+      </div>
+      <div class="bio-copy">
+        <span class="eyebrow"><b>Bio</b> — About Eva</span>
+        <h2 id="bio-title" class="exp-title" style="font-size:1.4rem;margin-top:0">About me</h2>
+        <p>Great interaction design isn’t just about moving pixels around. It’s about respecting user intent, stripping away unnecessary embellishments, and constructing frameworks that feel physically present.</p>
+        <h3>Experiences</h3>
+        <div class="exp-grid">
+          <article class="exp-card">
+            <div class="meta"><span class="role">Design Intern<br>Company</span><span class="when">Jun – Aug 2026<br>Seoul, South Korea</span></div>
+            <div class="placeholder"></div>
+          </article>
+          <article class="exp-card">
+            <div class="meta"><span class="role">Designer + Developer<br>Lehigh University</span><span class="when">Jan 2026 – Present<br>Bethlehem, PA</span></div>
+            <div class="placeholder"></div>
+          </article>
+          <article class="exp-card">
+            <div class="meta"><span class="role">Role<br>Organization</span><span class="when">Jan 2026 – Present<br>Bethlehem, PA</span></div>
+            <div class="placeholder"></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SELECTED WORKS -->
+  <section id="works" aria-labelledby="works-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow"><b>01</b> — Explore my work</span>
+          <h2 id="works-title">Selected Works + Categories</h2>
+        </div>
+        <p>A curation of digital products and design systems crafted with obsessive attention to interaction detail.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button aria-pressed="true" data-filter="all">All</button>
+        <button aria-pressed="false" data-filter="graphic">Graphic</button>
+        <button aria-pressed="false" data-filter="visual">Visual</button>
+        <button aria-pressed="false" data-filter="game">Game</button>
+      </div>
+      <div class="works-grid">
+        <!-- Duplicate a card to add a project; set data-category to match a filter -->
+        <a class="work-card" href="#" data-category="graphic">Project title<small>Graphic design</small></a>
+        <a class="work-card" href="#" data-category="visual">Project title<small>Visual design</small></a>
+        <a class="work-card" href="#" data-category="game">Project title<small>Game development</small></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAY -->
+  <section id="play" aria-labelledby="play-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow"><b>02</b> — Play</span>
+          <h2 id="play-title">Explore</h2>
+        </div>
+        <p>Experiments, side projects, and interactive odds and ends.</p>
+      </div>
+      <div class="play-stage">Interactive area placeholder</div>
+
+      <div class="section-head" style="margin-top:clamp(3rem,6vw,5rem)">
+        <div>
+          <span class="eyebrow"><b>03</b> — Chapter</span>
+          <h2>The Creative Process</h2>
+        </div>
+        <p>A structured, collaborative rhythm that ensures predictable delivery of exceptional quality.</p>
+      </div>
+      <div class="process" style="margin-top:0">
+        <article class="step"><span class="n">01</span><h3>Inquire &amp; Calibrate</h3><p>We begin with deep inquiry, probing brand intent, business requirements, and user assumptions. I construct a solid strategic blueprint before a single pixel moves.</p></article>
+        <article class="step"><span class="n">02</span><h3>Iterative Architecture</h3><p>Translating wireframes into high-fidelity design modules. We meet weekly, verifying interactive components, spatial rhythm, and typographic systems.</p></article>
+        <article class="step"><span class="n">03</span><h3>Rigorous Craft</h3><p>Polishing interaction micro-animations, asset generation, and handing off clean, structured Figma files or complete Next.js builds directly to engineering.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <span class="eyebrow">Connect with me</span>
+          <h2 id="contact-title">Say hello</h2>
+          <p>Currently looking for internships and projects for 2027.</p>
+        </div>
+        <div class="placeholder" role="img" aria-label="Contact visual placeholder"></div>
+      </div>
+      <footer class="footer">
+        <div>
+          <strong>Eva Lin</strong>
+          <p class="muted">Designing and creating</p>
+          <p class="muted" style="margin-top:.75rem">© 2026 Eva Lin. All rights reserved.</p>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h4>Socials</h4>
+            <ul><li><a href="#">LinkedIn</a></li><li><a href="#">Download Resume</a></li></ul>
+          </div>
+          <div>
+            <h4>Contact direct</h4>
+            <ul><li><a href="mailto:evl229@lehigh.edu">you@lehigh.edu</a></li><li>Phone</li><li>Philadelphia, PA</li></ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<script src="./script.js" defer></script>
 </body>
 </html>
